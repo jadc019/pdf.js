@@ -1,0 +1,105 @@
+@import url(http://fonts.googleapis.com/css?family=Satisfy);
+@import url(https://fonts.googleapis.com/css?family=Muli);
+
+#draggable { width: 25px; height: 25px; padding: 8px 5px 0px 5px;}
+#droppable { width: 450px; height: 450px; }
+
+.ui-draggable, .ui-droppable {
+  background-position: top;
+}
+
+.ui-droppable{
+  position: relative;
+}
+
+.draggable-container{
+}
+
+.draggable-container > .pin {
+  background-image: url("../images/pin-white.png");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  width: 25px;
+  height: 25px;
+}
+
+.draggable-container > .pin-red {
+  background-image: url("../images/pin-red.png");
+  background-repeat: no-repeat;
+  background-size: 25px 35px;
+  width: 25px;
+  height: 35px;
+  margin-top: 9px;
+  margin-left: 9px;
+}
+
+.draggable-container > .note-toolbar{
+  display: none;
+}
+
+.note-container {
+  margin-top: 25px;
+  position: absolute;
+}
+
+.note {
+  background: #eae672;
+  color: #333;
+  position: relative;
+  width: 300px;
+  max-height: 250px;
+  margin: 0px;
+  padding: 0px;
+  font-family: Muli;
+  font-size: 15px;
+  text-align: left;
+  overflow: auto;
+}
+
+.note textarea {
+  background: #eae672;
+  color: #333;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 15px;
+  margin: 0px;
+  resize: none;
+}
+
+.pin {
+  display: block;
+  cursor: pointer;
+  height: 25px;
+  width: 2px;
+  position: absolute;
+  z-index: 1;
+}
+
+.note-container > .pin {
+  left: 0px;
+  top: -25px;
+  background-image: url("../images/pin-red.png");
+  background-repeat: no-repeat;
+  background-size: 25px 35px;
+  width: 25px;
+  height: 35px; 
+}
+
+.note-toolbar {
+ float: right;
+ width: 100%;
+ text-align: right;
+}
+
+.hidden{
+  display: none;
+}
+
+.visible{
+  display: block;
+}
+
+blockquote{
+  border-left: 0px;
+}

@@ -40,6 +40,11 @@ See https://github.com/adobe-type-tools/cmap-resources
 <!--#endif-->
 
     <link rel="stylesheet" href="viewer.css">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
 <!--#if !PRODUCTION-->
     <link rel="resource" type="application/l10n" href="locale/locale.properties">
 <!--#endif-->
@@ -58,6 +63,11 @@ See https://github.com/adobe-type-tools/cmap-resources
 <!--#else-->
 <!--#include viewer-snippet-minified.html-->
 <!--#endif-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/autosize.js"></script>
 
   </head>
 
@@ -198,6 +208,18 @@ See https://github.com/adobe-type-tools/cmap-resources
                 <span id="numPages" class="toolbarLabel"></span>
               </div>
               <div id="toolbarViewerRight">
+
+                <div id="draggable" class="draggable-container"  title="Drag new note">
+                  <span class="pin"></span>
+                  <blockquote class="note hidden">
+                      <textarea readonly></textarea>
+                      <div class="note-toolbar">
+                        <button class="btn btn-xs save" type="submit"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+                        <button class="btn btn-xs delete" type="submit"><span class="glyphicon glyphicon-trash"></span></button>
+                      </div>
+                  </blockquote>
+                </div>
+
                 <button id="presentationMode" class="toolbarButton presentationMode hiddenLargeView" title="Switch to Presentation Mode" tabindex="31" data-l10n-id="presentation_mode">
                   <span data-l10n-id="presentation_mode_label">Presentation Mode</span>
                 </button>
